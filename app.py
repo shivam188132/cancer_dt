@@ -1,16 +1,13 @@
 import pandas as pd
 import streamlit as st
 import pickle
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import GradientBoostingClassifier
+
 # Load the model and scaler from disk
+with open('best_model.pkl', 'rb') as model_file:
+    model = pickle.load(model_file)
 
-
-with open('cancer_prediction_model.pkl', 'rb') as model_file:
-    gb_model = pickle.load(model_file)
-
-with open('scaler.pkl', 'rb') as scaler_file:
+with open('scaler (1).pkl', 'rb') as scaler_file:
     scaler = pickle.load(scaler_file)
 
 # Function to make predictions
@@ -18,7 +15,7 @@ def predict_cancer(age, gender, bmi, smoking, genetic_risk, physical_activity, a
     user_data = pd.DataFrame([[age, gender, bmi, smoking, genetic_risk, physical_activity, alcohol_intake, cancer_history]],
                              columns=['Age', 'Gender', 'BMI', 'Smoking', 'GeneticRisk', 'PhysicalActivity', 'AlcoholIntake', 'CancerHistory'])
     user_data_scaled = scaler.transform(user_data)
-    prediction = gb_model.predict(user_data_scaled)
+    prediction = model.predict(user_data_scaled)
     return prediction[0]
 
 # Streamlit app
@@ -41,3 +38,5 @@ if st.button("Predict"):
         st.success("Prediction: No Cancer")
     else:
         st.error("Prediction: Cancer")
+
+# Run the app with: streamlit run app.py
