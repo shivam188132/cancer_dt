@@ -1,6 +1,6 @@
 # Cancer Prediction App
 
-This repository contains the code for a web application that predicts cancer diagnosis based on various input features. The app is built using Streamlit and is deployed at the following URL: [Cancer Prediction App](https://shivamkr-testcancerpred.streamlit.app/).
+This repository contains the code for a web application that predicts cancer diagnosis based on various input features. The app is built using Streamlit and is deployed at the following URL: [Cancer Prediction App](https://shivam-krcancerdetectionsystem.streamlit.app/).
 
 ## Table of Contents
 - [Introduction](#introduction)
