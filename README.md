@@ -28,5 +28,18 @@ To run the app locally, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/cancer-prediction-app.git
+2. Create and activate a virtual environment
+3. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+
+## Usage
+1.To run the app locally
+
+ ```bash
+streamlit run app.py
+
+
+
 
 
