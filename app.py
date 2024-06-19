@@ -41,8 +41,8 @@ cancer_history = st.radio(" ", options=[0, 1], format_func=lambda x: 'No' if x =
 if st.button("Predict"):
     result = predict_cancer(age, gender, bmi, smoking, genetic_risk, physical_activity, alcohol_intake, cancer_history)
     if result == 0:
-        st.success("Prediction: No Cancer")
+        st.success("Prediction : 🍀✅ You are Safe (No Cancer)")
     else:
-        st.error("Prediction: Cancer")
+        st.error("Prediction  : ⚠️☠️🚨 High Chances of Cancer")
 
 # Run the app with: streamlit run app.py
