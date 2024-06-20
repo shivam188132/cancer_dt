@@ -19,6 +19,11 @@ def predict_cancer(age, gender, bmi, smoking, genetic_risk, physical_activity, a
 
 # Streamlit app
 st.title(":red[Cancer] Prediction :blue[App]")
+# video_file = open('muy.mp4', 'rb')
+# video_bytes = video_file.read()
+
+# st.video(video_bytes,  muted=False)
+
 
 st.write(":green[Please enter the following details:]")
 st.markdown("**👴 Age**")
