@@ -1,4 +1,4 @@
-# Cancer Prediction App
+## Cancer Prediction App
 
 This repository contains the code for a web application that predicts cancer diagnosis based on various input features. The app is built using Streamlit and is deployed at the following URL: [Cancer Prediction App](https://shivam-krcancerdetectionsystem.streamlit.app/).
 
@@ -32,14 +32,45 @@ To run the app locally, follow these steps:
 3. Install the required packages:
    ```bash
    pip install -r requirements.txt
+4. To run the app locally
+   ```bash
+      streamlit run app.py
 
-## Usage
-1.To run the app locally
+## Model Training
 
- ```bash
-streamlit run app.py
+The model is trained using the following features:
 
+- **Age**: Integer values representing the patient's age (20-80).
+- **Gender**: Binary values (0: Male, 1: Female).
+- **BMI**: Continuous values representing Body Mass Index (15-40).
+- **Smoking**: Binary values indicating smoking status (0: No, 1: Yes).
+- **Genetic Risk**: Categorical values for genetic risk levels (0: Low, 1: Medium, 2: High).
+- **Physical Activity**: Continuous values for hours per week spent on physical activities (0-10).
+- **Alcohol Intake**: Continuous values for alcohol units consumed per week (0-5).
+- **Cancer History**: Binary values indicating personal history of cancer (0: No, 1: Yes).
 
+# Training Script
+
+The model training script (`train_model.py`) preprocesses the data, trains an `XGBClassifier` model, and saves the trained model to disk as `best_model.pkl`.
+
+# Deployment
+
+The app is deployed using Streamlit and is accessible at [Cancer Prediction App](https://shivam-krcancerdetectionsystem.streamlit.app/).
+
+# Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+# License
+
+This project is licensed under the MIT License.
+
+# Contact
+
+For any inquiries, please contact:
+
+Shivam Kumar  
+Email: shivamkumar819991@gmail.com
 
 
 
