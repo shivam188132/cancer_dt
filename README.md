@@ -34,7 +34,7 @@ To run the app locally, follow these steps:
    pip install -r requirements.txt
 4. To run the app locally
    ```bash
-      streamlit run app.py
+   streamlit run app.py
 
 ## Model Training
 
