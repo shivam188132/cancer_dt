@@ -46,7 +46,7 @@ cancer_history = st.radio(" ", options=[0, 1], format_func=lambda x: 'No' if x =
 if st.button("Predict"):
     result = predict_cancer(age, gender, bmi, smoking, genetic_risk, physical_activity, alcohol_intake, cancer_history)
     if result == 0:
-        st.success("Prediction : 🍀✅ You are Safe ")
+        st.success("Prediction : 🍀 You are Safe ")
     else:
         st.error("Prediction  : ⚠️☠️🚨 High Chances of Cancer")
 
