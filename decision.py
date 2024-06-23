@@ -9,8 +9,7 @@ with open('best_model.pkl', 'rb') as model_file:
 
 with open('scaler.pkl', 'rb') as scaler_file:
     scaler = pickle.load(scaler_file)
-
-# Function to plot decision boundary
+    
 def plot_decision_boundary(X, y, model):
     # Define the min and max values for the plot
     x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
