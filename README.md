@@ -6,7 +6,6 @@ This repository contains the code for a web application that predicts cancer dia
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Model Training](#model-training)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
