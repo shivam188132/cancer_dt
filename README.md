@@ -51,7 +51,7 @@ The model is trained using the following features:
 
 # Training Script
 
-The model training script (`train_model.py`) preprocesses the data, trains an `XGBClassifier` model, and saves the trained model to disk as `best_model.pkl`.
+The model training script preprocesses the data, trains an `XGBClassifier` model, and saves the trained model to disk as `best_model.pkl`.
 
 # Deployment
 
