@@ -79,7 +79,7 @@ def layout(*args):
     style_div = styles(
         margin=px(0, 0, 0, 0),
         width=percent(100),
-        color="black",
+        color="green",
         text_align="center",
         height="auto",
         opacity=1
