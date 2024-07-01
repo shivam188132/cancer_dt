@@ -24,11 +24,6 @@ def predict_cancer(age, gender, bmi, smoking, genetic_risk, physical_activity, a
 # Streamlit app
 st.title(":red[AI powered] Cancer detection :blue[App]")
 st.subheader(":rainbow[Harnessing Machine learning for early diagnosis]")
-# video_file = open('muy.mp4', 'rb')
-# video_bytes = video_file.read()
-
-# st.video(video_bytes,  muted=False)
-
 
 st.write(":green[Please enter the following details:]")
 st.markdown("**👴 Age**")
@@ -68,16 +63,20 @@ def layout(*args):
 
     style = """
     <style>
-      # MainMenu {visibility: hidden;}
+      #MainMenu {visibility: hidden;}
       footer {visibility: hidden;}
-     .stApp { bottom: 105px; }
+      .stApp {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .main {
+        flex: 1;
+      }
     </style>
     """
 
     style_div = styles(
-        position="fixed",
-        left=0,
-        bottom=0,
         margin=px(0, 0, 0, 0),
         width=percent(100),
         color="black",
@@ -117,18 +116,17 @@ def layout(*args):
 
 def footer():
     myargs = [
-        "Made in ",
-        image('https://avatars3.githubusercontent.com/u/45109972?s=400&v=4',
-              width=px(25), height=px(25)),
-        " with ❤️ by ",
-        link("https://twitter.com/ChristianKlose3", "@ChristianKlose3"),
+        
+        # link("", image('https://i.imgur.com/QmFEKSu.png',width=px(100), height=px(100))),
+        "Made by  ",
+        link("https://www.linkedin.com/in/shivam-kumar-5a6b42237/", "@SHIVAM"),
+        " and ",
+        link("https://www.bitmesra.ac.in/Visit_My_Page?cid=1&deptid=69&i=ZxRnKJwUT130fLMhEW4psmTtOj8vKBO70fL4Q6xnqy0%3d", "@ANIRUDDHA DEB"),
         br(),
-        link("https://buymeacoffee.com/chrischross", image('https://i.imgur.com/thJhzOO.png')),
+        " Department of Chemical Engineering, BIT Mesra "
     ]
     layout(*myargs)
 
 
 if __name__ == "__main__":
     footer()
-
-# Run the app with: streamlit run app.py
